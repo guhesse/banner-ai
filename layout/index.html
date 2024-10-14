@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Visualização de Banners</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div id="controls">
+    <h2>Atualizar Conteúdo</h2>
+    <div class="control-section" id="controls-frame1">
+      <h3>Frame 1</h3>
+      <label for="frame1-title">Badge 1:</label>
+      <input type="text" id="f1-badge" placeholder="">
+      <label for="frame1-title">Title 1:</label>
+      <input type="text" id="f1-title" placeholder="">
+      <label for="frame1-title">Supercharger 1:</label>
+      <input type="text" id="f1-sc" placeholder="">
+      <label for="frame1-title">Product Name 1:</label>
+      <input type="text" id="f1-pro-name" placeholder="">
+      <label for="frame1-image">Product 1:</label>
+      <input type="text" id="frame1-image" placeholder="URL da imagem do Frame 1">
+      <!-- Adicione mais inputs conforme necessário -->
+    </div>
+
+    <div class="control-section" id="controls-frame2">
+      <h3>Frame 2</h3>
+      <label for="frame2-title">Título Frame 2:</label>
+      <input type="text" id="frame2-title" placeholder="Digite o título do Frame 2">
+      <label for="frame2-image">Imagem Frame 2:</label>
+      <input type="text" id="frame2-image" placeholder="URL da imagem do Frame 2">
+      <!-- Adicione mais inputs conforme necessário -->
+    </div>
+
+    <div class="control-section" id="controls-frame3">
+      <h3>Frame 3</h3>
+      <label for="frame3-title">Título Frame 3:</label>
+      <input type="text" id="frame3-title" placeholder="Digite o título do Frame 3">
+      <label for="frame3-image">Imagem Frame 3:</label>
+      <input type="text" id="frame3-image" placeholder="URL da imagem do Frame 3">
+      <!-- Adicione mais inputs conforme necessário -->
+    </div>
+
+    <div class="control-section" id="controls-frame4">
+      <h3>Frame 4</h3>
+      <label for="frame4-title">Título Frame 4:</label>
+      <input type="text" id="frame4-title" placeholder="Digite o título do Frame 4">
+      <label for="frame4-image">Imagem Frame 4:</label>
+      <input type="text" id="frame4-image" placeholder="URL da imagem do Frame 4">
+      <!-- Adicione mais inputs conforme necessário -->
+    </div>
+
+    <div class="control-section" id="controls-frame5">
+      <h3>Frame 5</h3>
+      <label for="frame5-title">Título Frame 5:</label>
+      <input type="text" id="frame5-title" placeholder="Digite o título do Frame 5">
+      <label for="frame5-image">Imagem Frame 5:</label>
+      <input type="text" id="frame5-image" placeholder="URL da imagem do Frame 5">
+      <!-- Adicione mais inputs conforme necessário -->
+    </div>
+  </div>
+
+
+
+  <div id="visualization">
+    <div class="frame" id="frame-one">
+      <img src="pro-f1.png" alt="" class="pro-f1">
+      <img src="dell-logo.png" alt="" class="dell-logo">
+      <div class="txt-con-f1">
+        <div class="badge1">Escolhas Inteligentes</div>
+        <div class="title1">Ofertas exclusivas por tempo limitado</div>
+      </div>
+      <div class="bundle-txt-1">
+        <div class="sc-txt-1">Até 12x sem juros</div>
+        <div class="proname-txt-1">Novo Notebook Gamer G15</div>
+      </div>
+      <div class="funding-box">
+        <img src="funding-logo.png" alt="" class="funding-logo">
+        <div class="funding-copy">Funding Copy</div>
+      </div>
+      <div class="cta-1">Ver ofertas</div>
+    </div>
+
+    <div class="frame" id="frame-two">
+      <div class="title2">A tecnologia mais recente para entrar no modo game</div>
+      <img src="pro-f2.png" alt="" class="pro-f2">
+      <img src="bg-pattern1.png" alt="" class="bg-pattern1">
+    </div>
+
+    <div class="frame" id="frame-three">
+      <div class="bg-con-f3">
+        <img src="bg-f3.jpg" alt="" class="bg-f3">
+      </div>
+      <div class="bundle-txt-3">
+        <div class="sc-txt-3">Até 12x sem juros</div>
+        <div class="proname-txt-3">Novo Notebook Gamer G15</div>
+      </div>
+    </div>
+
+    <!-- Frame four-->
+    <div class="frame" id="frame-four">
+      <img src="bg-pattern2.png" alt="" class="bg-pattern4">
+      <img src="pro-f4.png" alt="" class="f4-pro">
+      <div class="proname-txt-4">Monitor gamer com<br> resolução dupla<br>4K de 27" Alienware <br> AW2725QF</div>
+      <div class="txt-con-f4">
+        <div class="title4">
+          <span class="title4-1 js-split-text">Equipamentos</span><br>
+          <span class="title4-1 js-split-text">superiores</span><br>
+        </div>
+
+        <div class="dell-element-4"></div>
+      </div>
+      <div class="cta-3">Ver ofertas</div>
+
+    </div>
+
+    <!-- Frame five-->
+    <div class="frame" id="frame-five">
+      <div class="img-cont-f5">
+        <img src="bg-f5.jpg" alt="" class="f5-bg">
+      </div>
+      <img src="dell-logo-f5.png" alt="" class="dell-logo">
+      <div class="badge5">
+        <span class="badge1-1 js-split-text">ESCOLHAS INTELIGENTES</span>
+      </div>
+
+      <div class="title5">
+        <span class="title5-1 js-split-text">Desempenho</span><br>
+        <span class="title5-1 js-split-text">máximo</span><br>
+      </div>
+      <div class="funding-box">
+        <img src="funding-logo.png" alt="" class="funding-logo">
+        <div class="funding-copy">Funding Copy</div>
+      </div>
+
+      <div class="cta-4">Ver ofertas</div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script type="text/javascript" src="custom.js" charset="UTF-8"></script>
+  <script type="text/javascript" src="visualization.js" charset="UTF-8"></script>
+</body>
+
+</html>

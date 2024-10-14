@@ -1,0 +1,528 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#controls {
+  margin-bottom: 20px;
+}
+
+.control-section {
+  margin-bottom: 20px;
+}
+
+#visualization {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.frame {
+  width: 300px;
+  height: 250px;
+  border: 1px solid #ccc;
+  background-color: #1B5744;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Adicione aqui o estilo do seu layout */
+
+html {
+  box-sizing: border-box;
+  text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+img {
+  border: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #FFFFFF;
+  background: #3c3c3c;
+  font-size: 10px;
+}
+
+sup {
+  vertical-align: 4px;
+  font-size: 5px;
+  line-height: 0;
+}
+
+.font-preloader {
+  font-family: 'Roboto';
+  font-weight: 300;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+#frame_one,
+#frame_two,
+#frame_three,
+#frame_four,
+#frame_five {
+  width: 100%;
+  height: 100%;
+}
+
+/*-------------------------------------
+  Layout
+---------------------------------------*/
+
+#ad {
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 300px;
+  height: 250px;
+  font-size: 10px;
+}
+
+#banner {
+  position: absolute;
+  background: #1B5744;
+  display: block;
+  width: 300px;
+  height: 250px;
+  overflow: hidden;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+#clickTAG {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+#border {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  border: 1px solid #444;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.pro-f1 {
+  width: 130.0px;
+  height: auto;
+  position: absolute;
+  top: 50.0%;
+  transform: translate(0, -50%);
+  right: 3.0%;
+}
+
+.dell-logo {
+  position: absolute;
+  height: 25px;
+  top: 5.5%;
+  left: 4.0%;
+}
+
+.txt-con-f1 {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10px;
+  width: 50.0%;
+  height: auto;
+  top: 23.833333333333332%;
+  left: 4.0%;
+}
+
+.badge1 {
+  font-size: 10.0px;
+  line-height: 11px;
+  font-weight: 700;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: #E4FFD6;
+}
+
+.title1 {
+  font-size: 18.0px;
+  line-height: 19px;
+  font-weight: 300;
+  text-align: left;
+  color: #E4FFD6;
+}
+
+.bundle-txt-1 {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  width: auto;
+  height: auto;
+  bottom: 30.666666666666664%;
+  left: 4.0%;
+}
+
+.sc-txt-1 {
+  font-size: 14.0px;
+  line-height: 12px;
+  font-weight: 300;
+  text-align: left;
+  color: #E4FFD6;
+}
+
+.proname-txt-1 {
+  font-size: 11.0px;
+  line-height: 12px;
+  font-weight: 500;
+  text-align: left;
+  color: #E4FFD6;
+}
+
+.funding-box {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  height: 50px;
+  width: 150.0px;
+  gap: 8px;
+  bottom: 4.0%;
+  left: 4.0%;
+  z-index: 1;
+}
+
+.funding-logo {
+  height: 50px;
+}
+
+.funding-copy {
+  color: #E4FFD6;
+  white-space: nowrap;
+  font-size: 9.0px;
+  line-height: 11px;
+  text-align: left;
+  letter-spacing: 0.2px;
+}
+
+.cta-1 {
+  position: absolute;
+  background: #E4FFD6;
+  color: #1B5744;
+  border: #E4FFD6 1px solid;
+  text-align: center;
+  bottom: 4.0%;
+  display: block;
+  padding: 7px 10px;
+  font-size: 10.0px;
+  line-height: 10px;
+  letter-spacing: 0.3px;
+  font-weight: 700;
+  white-space: nowrap;
+  vertical-align: middle;
+  z-index: 1;
+  right: 4.0%;
+}
+
+.title2 {
+  position: absolute;
+  font-size: 15.0px;
+  line-height: 16px;
+  font-weight: 300;
+  text-align: center;
+  color: #E4FFD6;
+  top: 5.0%;
+  left: 50.0%;
+  transform: translate(-50%, 0);
+  width: 80.0%;
+}
+
+.pro-f2 {
+  width: 170.0px;
+  height: auto;
+  position: absolute;
+  top: 50.0%;
+  transform: translate(-50%, -50%);
+  left: 50.0%;
+  z-index: 1;
+}
+
+.bg-pattern1 {
+  position: absolute;
+  width: 600.0px;
+  height: auto;
+  right: 0;
+  top: 50.0%;
+  transform: translate(0, -50%);
+}
+
+.bg-con-f3 {
+  position: absolute;
+  width: 100.0%;
+  height: 200px;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.bg-f3 {
+  position: absolute;
+  width: 100.0%;
+  height: auto;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.bundle-txt-3 {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
+  width: 150.0px;
+  height: auto;
+  bottom: 4.0%;
+  left: 4.0%;
+}
+
+.sc-txt-3 {
+  font-size: 1.4em;
+  line-height: 1.2em;
+  font-weight: 300;
+  color: #E4FFD6;
+}
+
+.proname-txt-3 {
+  font-size: 1.1em;
+  line-height: 1em;
+  font-weight: 500;
+  color: #E4FFD6;
+}
+
+.funding-box-2 {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 8px;
+  bottom: 4.0%;
+  left: 4.0%;
+  z-index: 1;
+}
+
+.funding-logo-f2 {
+  height: 50px;
+}
+
+.funding-copy-f2 {
+  color: #E4FFD6;
+  white-space: nowrap;
+  font-size: 9.0px;
+  line-height: 11px;
+  text-align: left;
+  letter-spacing: 0.2px;
+}
+
+.cta-2 {
+  position: absolute;
+  background: #E4FFD6;
+  color: #1B5744;
+  border: #E4FFD6 1px solid;
+  text-align: center;
+  bottom: 4.0%;
+  display: block;
+  padding: 7px 10px;
+  font-size: 10.0px;
+  line-height: 10px;
+  letter-spacing: 0.3px;
+  font-weight: 700;
+  white-space: nowrap;
+  vertical-align: middle;
+  z-index: 1;
+  right: 4.0%;
+}
+
+.cta-3 {
+  position: absolute;
+  background: #E4FFD6;
+  color: #1B5744;
+  border: #E4FFD6 1px solid;
+  text-align: center;
+  bottom: 4.0%;
+  display: block;
+  padding: 7px 10px;
+  font-size: 10.0px;
+  line-height: 10px;
+  letter-spacing: 0.3px;
+  font-weight: 700;
+  white-space: nowrap;
+  vertical-align: middle;
+  z-index: 1;
+  left: 4.0%;
+}
+
+.cta-4 {
+  position: absolute;
+  background: #E4FFD6;
+  color: #1B5744;
+  border: #E4FFD6 1px solid;
+  text-align: center;
+  bottom: 4.0%;
+  display: block;
+  padding: 7px 10px;
+  font-size: 10.0px;
+  line-height: 10px;
+  letter-spacing: 0.3px;
+  font-weight: 700;
+  white-space: nowrap;
+  vertical-align: middle;
+  z-index: 1;
+  right: 4.0%;
+}
+
+/*-------------------------------------
+  Frame four frame duration: 3.5s
+---------------------------------------*/
+.bg-pattern4 {
+  position: absolute;
+  width: 70px;
+  height: auto;
+  right: 15%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+.f4-pro {
+  position: absolute;
+  width: 160px;
+  height: auto;
+  right: 2%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.proname-txt-4 {
+  position: absolute;
+  font-size: 11px;
+  line-height: 12px;
+  font-weight: 500;
+  text-align: left;
+  color: #E4FFD6;
+  left: 4%;
+  bottom: 18.5%;
+}
+
+
+.txt-con-f4 {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  left: 4%;
+  top: 6.5%;
+  z-index: 1;
+
+}
+
+.title4 {
+  position: absolute;
+  font-size: 22px;
+  line-height: 23px;
+  font-weight: 300;
+  text-align: left;
+  color: #E4FFD6;
+  top: 5%;
+  left: 0;
+}
+
+
+.dell-element-4 {
+  position: absolute;
+  top: 75%;
+  left: .5%;
+  width: 24px;
+  height: 6px;
+  background: #E4FFD6;
+  opacity: 0;
+
+}
+
+/*-------------------------------------
+  Frame five frame duration: 3.5s
+---------------------------------------*/
+
+.img-cont-f5 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 48%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.f5-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.badge5 {
+  position: absolute;
+  font-size: 10px;
+  line-height: 11px;
+  font-weight: 700;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: #E4FFD6;
+  left: 4.25%;
+  top: 32.75%;
+}
+
+.title5 {
+  position: absolute;
+  font-size: 23px;
+  line-height: 24px;
+  font-weight: 300;
+  text-align: left;
+  color: #E4FFD6;
+  left: 4.25%;
+  top: 40%;
+}
+
+.dell-logof5 {
+  position: absolute;
+  width: auto;
+  height: auto;
+  top: 5.5%;
+  left: 4.25%;
+}
