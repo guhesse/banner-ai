@@ -1,67 +1,69 @@
-/*-------------------------------------
-    Reset
----------------------------------------*/
 
-/******Basic settings**********/
-* {
+    
+    /*-------------------------------------
+    Reset
+    ---------------------------------------*/
+
+    /******Basic settings**********/
+    * {
     margin: 0;
     padding: 0;
-}
+    }
 
-html {
+    html {
     box-sizing: border-box;
     text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
-}
+    }
 
-*,
-*:before,
-*:after {
+    *,
+    *:before,
+    *:after {
     box-sizing: inherit;
-}
+    }
 
-img {
+    img {
     border: 0;
-}
+    }
 
-a {
+    a {
     text-decoration: none;
-}
+    }
 
-body {
+    body {
     font-family: 'Roboto', sans-serif;
     color: #FFFFFF;
-}
+    }
 
-sup {
+    sup {
     vertical-align: 4px;
     font-size: 5px;
     line-height: 0;
-}
+    }
 
-.font-preloader {
+    .font-preloader {
     font-family: 'Roboto';
     font-weight: 300;
     visibility: hidden;
     width: 0;
     height: 0;
-}
+    }
 
-#frame_one,
-#frame_two,
-#frame_three,
-#frame_four,
-#frame_five {
+    #frame_one,
+    #frame_two,
+    #frame_three,
+    #frame_four,
+    #frame_five {
     width: 100%;
     height: 100%;
 }
 
-/*-------------------------------------
+    /*-------------------------------------
     Layout
     ---------------------------------------*/
 
-#ad {
+    #ad {
     -moz-user-select: -moz-none;
     -khtml-user-select: none;
     -webkit-user-select: none;
@@ -70,9 +72,9 @@ sup {
     width: 100%;
     height: 100%;
     font-size: 10px;
-}
+    }
 
-#banner {
+    #banner {
     position: absolute;
     background: #1B5744;
     display: block;
@@ -81,9 +83,9 @@ sup {
     overflow: hidden;
     cursor: pointer;
     visibility: hidden;
-}
+    }
 
-#clickTAG {
+    #clickTAG {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -91,9 +93,9 @@ sup {
     top: 0;
     left: 0;
     cursor: pointer;
-}
+    }
 
-#border {
+    #border {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -103,416 +105,318 @@ sup {
     border: 1px solid #444;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-}
+    }.pro-f1 { width: 130px; height: auto; position: absolute; top: 50%; transform: translate(0px, -50%); right: 3%; }
+.dell-logo-f1 { position: absolute; height: 25px; top: 5.5%; left: 4%; }
+.txt-con-f1 { position: absolute; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 10px; width: 50%; height: auto; top: 23.8333%; left: 4%; }
+.badge1 { font-size: 10px; line-height: 11px; font-weight: 700; text-align: left; text-transform: uppercase; letter-spacing: 0.4px; color: rgb(228, 255, 214); }
+.title1 { font-size: 18px; line-height: 19px; font-weight: 300; text-align: left; color: rgb(228, 255, 214); }
+.bundle-txt-1 { position: absolute; display: flex; flex-direction: column; align-items: flex-start; gap: 5px; width: auto; height: auto; bottom: 30.6667%; left: 4%; }
+.sc-txt-1 { font-size: 14px; line-height: 12px; font-weight: 300; text-align: left; color: rgb(228, 255, 214); }
+.proname-txt-1 { font-size: 11px; line-height: 12px; font-weight: 500; text-align: left; color: rgb(228, 255, 214); }
+.funding-box-f1 { position: absolute; display: flex; flex-direction: row; align-items: flex-end; height: 50px; width: 150px; gap: 8px; bottom: 4%; left: 4%; z-index: 1; }
+.funding-logo-f1 { height: 50px; }
+.funding-copy-f1 { color: rgb(228, 255, 214); white-space: nowrap; font-size: 9px; line-height: 11px; text-align: left; letter-spacing: 0.2px; }
+.cta-1 { position: absolute; background: rgb(228, 255, 214); color: rgb(27, 87, 68); border: 1px solid rgb(228, 255, 214); text-align: center; bottom: 4%; display: block; padding: 7px 10px; font-size: 10px; line-height: 10px; letter-spacing: 0.3px; font-weight: 700; white-space: nowrap; vertical-align: middle; z-index: 1; right: 4%; }
+.title2 { position: absolute; font-size: 15px; line-height: 16px; font-weight: 300; text-align: center; color: rgb(228, 255, 214); top: 5%; left: 50%; transform: translate(-50%, 0px); width: 80%; }
+.pro-f2 { width: 170px; height: auto; position: absolute; top: 50%; transform: translate(-50%, -50%); left: 50%; z-index: 1; }
+.pattern-f2 { position: absolute; width: 600px; height: auto; right: 0px; top: 50%; transform: translate(0px, -50%); }
+.bg-con-f3 { position: absolute; width: 100%; height: 200px; top: 0px; left: 0px; overflow: hidden; }
+.bg-f3 { position: absolute; width: 100%; height: auto; top: 0px; left: 0px; object-fit: cover; object-position: center center; }
+.bundle-txt-3 { position: absolute; display: flex; flex-direction: column; align-items: flex-start; gap: 3px; width: 150px; height: auto; bottom: 4%; left: 4%; }
+.sc-txt-3 { font-size: 1.4em; line-height: 1.2em; font-weight: 300; color: rgb(228, 255, 214); }
+.proname-txt-3 { font-size: 1.1em; line-height: 1em; font-weight: 500; color: rgb(228, 255, 214); }
+.funding-box-f2 { position: absolute; display: flex; flex-direction: row; align-items: flex-end; gap: 8px; bottom: 4%; left: 4%; z-index: 1; }
+.funding-logo-f2 { height: 50px; }
+.funding-copy-f2 { color: rgb(228, 255, 214); white-space: nowrap; font-size: 9px; line-height: 11px; text-align: left; letter-spacing: 0.2px; }
+.cta-2, .cta-3 { position: absolute; background: rgb(228, 255, 214); color: rgb(27, 87, 68); border: 1px solid rgb(228, 255, 214); text-align: center; bottom: 4%; display: block; padding: 7px 10px; font-size: 10px; line-height: 10px; letter-spacing: 0.3px; font-weight: 700; white-space: nowrap; vertical-align: middle; z-index: 1; right: 4%; }
+.cta-4 { position: absolute; background: rgb(228, 255, 214); color: rgb(27, 87, 68); border: 1px solid rgb(228, 255, 214); text-align: center; bottom: 4%; display: block; padding: 7px 10px; font-size: 10px; line-height: 10px; letter-spacing: 0.3px; font-weight: 700; white-space: nowrap; vertical-align: middle; z-index: 1; left: 4%; }
+.cta-5 { position: absolute; background: rgb(228, 255, 214); color: rgb(27, 87, 68); border: 1px solid rgb(228, 255, 214); text-align: center; bottom: 4%; display: block; padding: 7px 10px; font-size: 10px; line-height: 10px; letter-spacing: 0.3px; font-weight: 700; white-space: nowrap; vertical-align: middle; z-index: 1; right: 4%; }
+.pattern-f4 { position: absolute; width: 70px; height: auto; right: 15%; top: 50%; transform: translateY(-50%); }
+.pro-f4 { position: absolute; width: 160px; height: auto; right: 2%; top: 50%; transform: translateY(-50%); }
+.proname-txt-4 { position: absolute; font-size: 11px; line-height: 12px; font-weight: 500; text-align: left; color: rgb(228, 255, 214); width: 35%; left: 4%; bottom: 18.5%; }
+.txt-con-f4 { position: absolute; width: 160px; height: 160px; left: 4%; top: 6.5%; z-index: 1; }
+.title4 { position: absolute; font-size: 22px; line-height: 23px; font-weight: 300; text-align: left; color: rgb(228, 255, 214); top: 5%; left: 0px; }
+.bg-con-f5 { position: absolute; top: 0px; right: 0px; width: 48%; height: 100%; overflow: hidden; }
+.bg-f5 { position: absolute; top: 0px; right: 0px; width: auto; height: 100%; object-fit: cover; object-position: 50% 50%; }
+.txt-con-f5 { position: absolute; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 10px; width: 50%; height: auto; transform: translateY(-50%); top: 50%; left: 4%; }
+.badge5 { font-size: 10px; line-height: 11px; font-weight: 700; text-align: left; text-transform: uppercase; letter-spacing: 0.4px; color: rgb(228, 255, 214); }
+.title5 { font-size: 23px; line-height: 24px; font-weight: 300; text-align: left; color: rgb(228, 255, 214); }
+.dell-logo-f5 { position: absolute; width: auto; height: 25px; top: 5.5%; left: 4.25%; }
+.funding-box-f5 { position: absolute; display: flex; flex-direction: row; align-items: flex-end; gap: 8px; bottom: 4%; left: 4%; z-index: 1; }
+.funding-logo-f5 { height: 50px; }
+.funding-copy-f5 { color: rgb(228, 255, 214); white-space: nowrap; font-size: 9px; line-height: 11px; text-align: left; letter-spacing: 0.2px; }
 
-.pro-f1 {
-    width: 130px;
-    height: auto;
-    position: absolute;
-    top: 50%;
-    transform: translate(0px, -50%);
-    right: 3%;
-}
 
-.dell-logo-f1 {
-    position: absolute;
-    height: 25px;
-    top: 5.5%;
-    left: 4%;
-}
 
-.txt-con-f1 {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 10px;
-    width: 50%;
-    height: auto;
-    top: 23.8333%;
-    left: 4%;
-}
 
-.badge1 {
-    font-size: 10px;
-    line-height: 11px;
-    font-weight: 700;
-    text-align: left;
-    text-transform: uppercase;
-    letter-spacing: 0.4px;
-    color: rgb(228, 255, 214);
-}
 
-.title1 {
-    font-size: 18px;
-    line-height: 19px;
-    font-weight: 300;
-    text-align: left;
-    color: rgb(228, 255, 214);
-}
 
-.bundle-txt-1 {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 5px;
-    width: auto;
-    height: auto;
-    bottom: 30.6667%;
-    left: 4%;
-}
 
-.sc-txt-1 {
-    font-size: 14px;
-    line-height: 12px;
-    font-weight: 300;
-    text-align: left;
-    color: rgb(228, 255, 214);
-}
 
-.proname-txt-1 {
-    font-size: 11px;
-    line-height: 12px;
-    font-weight: 500;
-    text-align: left;
-    color: rgb(228, 255, 214);
-}
 
-.funding-box-f1 {
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    height: 50px;
-    width: 150px;
-    gap: 8px;
-    bottom: 4%;
-    left: 4%;
-    z-index: 1;
-}
 
-.funding-logo-f1 {
-    height: 50px;
-}
 
-.funding-copy-f1 {
-    color: rgb(228, 255, 214);
-    white-space: nowrap;
-    font-size: 9px;
-    line-height: 11px;
-    text-align: left;
-    letter-spacing: 0.2px;
-}
 
-.cta-1 {
-    position: absolute;
-    background: rgb(228, 255, 214);
-    color: rgb(27, 87, 68);
-    border: 1px solid rgb(228, 255, 214);
-    text-align: center;
-    bottom: 4%;
-    display: block;
-    padding: 7px 10px;
-    font-size: 10px;
-    line-height: 10px;
-    letter-spacing: 0.3px;
-    font-weight: 700;
-    white-space: nowrap;
-    vertical-align: middle;
-    z-index: 1;
-    right: 4%;
-}
 
-.title2 {
-    position: absolute;
-    font-size: 15px;
-    line-height: 16px;
-    font-weight: 300;
-    text-align: center;
-    color: rgb(228, 255, 214);
-    top: 5%;
-    left: 50%;
-    transform: translate(-50%, 0px);
-    width: 80%;
-}
 
-.pro-f2 {
-    width: 170px;
-    height: auto;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    left: 50%;
-    z-index: 1;
-}
 
-.pattern-f2 {
-    position: absolute;
-    width: 600px;
-    height: auto;
-    right: 0px;
-    top: 50%;
-    transform: translate(0px, -50%);
-}
 
-.bg-con-f3 {
-    position: absolute;
-    width: 100%;
-    height: 200px;
-    top: 0px;
-    left: 0px;
-    overflow: hidden;
-}
 
-.bg-f3 {
-    position: absolute;
-    width: 100%;
-    height: auto;
-    top: 0px;
-    left: 0px;
-    object-fit: cover;
-    object-position: center center;
-}
 
-.bundle-txt-3 {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 3px;
-    width: 150px;
-    height: auto;
-    bottom: 4%;
-    left: 4%;
-}
 
-.sc-txt-3 {
-    font-size: 1.4em;
-    line-height: 1.2em;
-    font-weight: 300;
-    color: rgb(228, 255, 214);
-}
 
-.proname-txt-3 {
-    font-size: 1.1em;
-    line-height: 1em;
-    font-weight: 500;
-    color: rgb(228, 255, 214);
-}
 
-.funding-box-f2 {
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    gap: 8px;
-    bottom: 4%;
-    left: 4%;
-    z-index: 1;
-}
 
-.funding-logo-f2 {
-    height: 50px;
-}
 
-.funding-copy-f2 {
-    color: rgb(228, 255, 214);
-    white-space: nowrap;
-    font-size: 9px;
-    line-height: 11px;
-    text-align: left;
-    letter-spacing: 0.2px;
-}
 
-.cta-2,
-.cta-3 {
-    position: absolute;
-    background: rgb(228, 255, 214);
-    color: rgb(27, 87, 68);
-    border: 1px solid rgb(228, 255, 214);
-    text-align: center;
-    bottom: 4%;
-    display: block;
-    padding: 7px 10px;
-    font-size: 10px;
-    line-height: 10px;
-    letter-spacing: 0.3px;
-    font-weight: 700;
-    white-space: nowrap;
-    vertical-align: middle;
-    z-index: 1;
-    right: 4%;
-}
 
-.cta-4 {
-    position: absolute;
-    background: rgb(228, 255, 214);
-    color: rgb(27, 87, 68);
-    border: 1px solid rgb(228, 255, 214);
-    text-align: center;
-    bottom: 4%;
-    display: block;
-    padding: 7px 10px;
-    font-size: 10px;
-    line-height: 10px;
-    letter-spacing: 0.3px;
-    font-weight: 700;
-    white-space: nowrap;
-    vertical-align: middle;
-    z-index: 1;
-    left: 4%;
-}
 
-.cta-5 {
-    position: absolute;
-    background: rgb(228, 255, 214);
-    color: rgb(27, 87, 68);
-    border: 1px solid rgb(228, 255, 214);
-    text-align: center;
-    bottom: 4%;
-    display: block;
-    padding: 7px 10px;
-    font-size: 10px;
-    line-height: 10px;
-    letter-spacing: 0.3px;
-    font-weight: 700;
-    white-space: nowrap;
-    vertical-align: middle;
-    z-index: 1;
-    right: 4%;
-}
 
-.pattern-f4 {
-    position: absolute;
-    width: 70px;
-    height: auto;
-    right: 15%;
-    top: 50%;
-    transform: translateY(-50%);
-}
 
-.pro-f4 {
-    position: absolute;
-    width: 160px;
-    height: auto;
-    right: 2%;
-    top: 50%;
-    transform: translateY(-50%);
-}
 
-.proname-txt-4 {
-    position: absolute;
-    font-size: 11px;
-    line-height: 12px;
-    font-weight: 500;
-    text-align: left;
-    color: rgb(228, 255, 214);
-    width: 35%;
-    left: 4%;
-    bottom: 18.5%;
-}
 
-.txt-con-f4 {
-    position: absolute;
-    width: 160px;
-    height: 160px;
-    left: 4%;
-    top: 6.5%;
-    z-index: 1;
-}
 
-.title4 {
-    position: absolute;
-    font-size: 22px;
-    line-height: 23px;
-    font-weight: 300;
-    text-align: left;
-    color: rgb(228, 255, 214);
-    top: 5%;
-    left: 0px;
-}
 
-.bg-con-f5 {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    width: 48%;
-    height: 100%;
-    overflow: hidden;
-}
 
-.bg-f5 {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    width: auto;
-    height: 100%;
-    object-fit: cover;
-    object-position: 50% 50%;
-}
 
-.txt-con-f5 {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 10px;
-    width: 50%;
-    height: auto;
-    transform: translateY(-50%);
-    top: 50%;
-    left: 4%;
-}
 
-.badge5 {
-    font-size: 10px;
-    line-height: 11px;
-    font-weight: 700;
-    text-align: left;
-    text-transform: uppercase;
-    letter-spacing: 0.4px;
-    color: rgb(228, 255, 214);
-}
 
-.title5 {
-    font-size: 23px;
-    line-height: 24px;
-    font-weight: 300;
-    text-align: left;
-    color: rgb(228, 255, 214);
-}
 
-.dell-logo-f5 {
-    position: absolute;
-    width: auto;
-    height: 25px;
-    top: 5.5%;
-    left: 4.25%;
-}
 
-.funding-box-f5 {
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    gap: 8px;
-    bottom: 4%;
-    left: 4%;
-    z-index: 1;
-}
 
-.funding-logo-f5 {
-    height: 50px;
-}
 
-.funding-copy-f5 {
-    color: rgb(228, 255, 214);
-    white-space: nowrap;
-    font-size: 9px;
-    line-height: 11px;
-    text-align: left;
-    letter-spacing: 0.2px;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

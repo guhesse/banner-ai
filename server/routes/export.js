@@ -4,11 +4,11 @@ const fs = require('fs');
 const path = require('path');
 
 router.post('/', (req, res) => {
-    const { htmlContent, cssContent, images } = req.body;
+    const { htmlContent, cssContent, images, patterns, logos } = req.body;
 
-    const exportDir = path.join(__dirname, '../../exported_layout');
+    const exportDir = path.join(__dirname, '..', '..', 'exported_layout');
     if (!fs.existsSync(exportDir)) {
-        fs.mkdirSync(exportDir);
+        fs.mkdirSync(exportDir, { recursive: true });
     }
 
     // Salvar o conteúdo HTML dos frames de visualização
@@ -120,7 +120,7 @@ router.post('/', (req, res) => {
     user-select: none;
     width: 100%;
     height: 100%;
-    font-size: 4vh;
+    font-size: 10px;
     }
 
     #banner {
@@ -154,8 +154,7 @@ router.post('/', (req, res) => {
     border: 1px solid #444;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    }
-${cssContent}`);
+    }${cssContent}`);
 
     // Salvar o conteúdo JS em um arquivo separado
     const jsContent = `
@@ -180,23 +179,23 @@ ${cssContent}`);
             tl.set(banner, { visibility: "visible" })
 
                 /*frame one*/
-                .from(".dell-logo, .funding-box-f1, .cta-1", .3, { autoAlpha: 0 }, "frame1")
+                .from(".dell-logo-f1, .funding-box-f1, .cta-1", .3, { autoAlpha: 0 }, "frame1")
                 .from(".pro-f1", { autoAlpha: 0, x: "100%" }, "frame1")
                 .from(".badge1 .letter", .3, { autoAlpha: 0, ease: 'Sine.easeIn', stagger: 0.02 }, "frame1+=.3")
                 .from(" .bundle-txt-1", { autoAlpha: 0 }, "frame1+=1")
                 .from(".title1 .letter", .3, { autoAlpha: 0, ease: 'Sine.easeIn', stagger: 0.02 }, "frame1+=.5")
                 .to(".badge1, .bundle-txt-1, .title1", { autoAlpha: 0 }, "frame1+=2.5")
-                .to(".pro-f1, .cta-1, .dell-logo, .funding-box-f1", { autoAlpha: 0 }, "frame1+=2.7")
+                .to(".pro-f1, .cta-1, .dell-logo-f1, .funding-box-f1", { autoAlpha: 0 }, "frame1+=2.7")
 
                 /*frame two*/
                 .add("frame2", "frame1+=3")
                 .from(".f2-bg", .3, { autoAlpha: 0 }, "frame2")
-                .from(".bg-pattern1", { autoAlpha: 0, x: "20%" }, "frame2")
+                .from(".pattern-f2", { autoAlpha: 0, x: "20%" }, "frame2")
                 .from(".f2-pro", { autoAlpha: 0, x: "100%" }, "frame2+=.3")
-                .from(" .funding-box-2, .cta-2", { autoAlpha: 0 }, "frame2+=.3")
+                .from(" .funding-box-f2, .cta-2", { autoAlpha: 0 }, "frame2+=.3")
                 .from(".title2 .letter", .3, { autoAlpha: 0, ease: 'Sine.easeIn', stagger: 0.02 }, "frame2+=.3")
                 .to(".title2", { autoAlpha: 0 }, "frame2+=2.5")
-                .to(".f2-pro, .cta-2, .funding-box-2, .bg-pattern1", { autoAlpha: 0 }, "frame2+=2.7")
+                .to(".f2-pro, .cta-2, .funding-box-f2, .pattern-f2", { autoAlpha: 0 }, "frame2+=2.7")
 
 
                 /*frame three*/
@@ -208,7 +207,7 @@ ${cssContent}`);
 
                 /*frame four*/
                 .add("frame4", "frame3+=3")
-                .from(".bg-pattern4", { autoAlpha: 0, y: "-20%" }, "frame4")
+                .from(".pattern-f4", { autoAlpha: 0, y: "-20%" }, "frame4")
                 .from(".f4-pro", { autoAlpha: 0, y: "-100%" }, "frame4+=.3")
                 .from(".cta-3", .3, { autoAlpha: 0 }, "frame4")
                 .set(".dell-element-4", { autoAlpha: 1, top: "0.5%" }, "frame4+=.3")
@@ -216,12 +215,11 @@ ${cssContent}`);
                 .from(".title4 .letter", .3, { autoAlpha: 0, ease: 'Sine.easeIn', stagger: 0.02 }, "frame4+=.5")
                 .from(".proname-txt-4", { autoAlpha: 0 }, "frame4+=.5")
                 .to(".dell-element-4, .title4", { autoAlpha: 0 }, "frame4+=2.5")
-                .to(".f2-bg, .bg-pattern4, .f4-pro, .proname-txt-4, .cta-3", { autoAlpha: 0 }, "frame4+=2.7")
+                .to(".f2-bg, .pattern-f4, .f4-pro, .proname-txt-4, .cta-3", { autoAlpha: 0 }, "frame4+=2.7")
 
                 /*frame five*/
                 .add("frame5", "frame4+=3")
-                .to(".funding-box", .3, { autoAlpha: 1 }, "frame5")
-                .from(".f5-bg, .dell-logof5, .cta-4", .3, { autoAlpha: 0 }, "frame5")
+                .from(".f5-bg, .dell-logo-f5, .funding-box-f5, .cta-4", .3, { autoAlpha: 0 }, "frame5")
                 .from(".badge5 .letter", .3, { autoAlpha: 0, ease: 'Sine.easeIn', stagger: 0.02 }, "frame5+=.3")
                 .from(".title5 .letter", .3, { autoAlpha: 0, ease: 'Sine.easeIn', stagger: 0.02 }, "frame5+=.5")
 
@@ -329,19 +327,54 @@ ${cssContent}`);
 
     fs.writeFileSync(path.join(exportDir, 'custom.js'), jsContent);
 
-    // Copiar as imagens para o diretório de exportação
-    images.forEach((image) => {
-        if (image) {
-            const imagePath = path.join(exportDir, path.basename(image));
+
+    // Copiar os padrões para o diretório de exportação
+    const patternsDir = path.join(__dirname, '..', 'patterns');
+
+    const patternFiles = ['pattern-f2.png', 'pattern-f4.png'];
+
+    patternFiles.forEach(patternFile => {
+        const srcPath = path.join(patternsDir, patternFile);
+        const destPath = path.join(exportDir, patternFile);
+        try {
+            fs.copyFileSync(srcPath, destPath);
+        } catch (error) {
+            console.error(`Erro ao copiar a imagem: ${patternFile}`, error);
+        }
+    });
+
+    // Copiar os logos para o diretório de exportação
+    const logosDir = path.join(__dirname, '..', 'logos');
+    logos.forEach(({ dellLogo, fundingLogo, dellFrameIndex, fundingFrameIndex }) => {
+        if (dellLogo) {
+            const dellLogoFileName = dellLogo.replace('/logos/', '');
+            const dellLogoFileExtension = path.extname(dellLogoFileName);
+            const dellDestFileName = `dell-logo-f${dellFrameIndex}${dellLogoFileExtension}`;
+            const dellSrcPath = path.join(logosDir, dellLogoFileName);
+            const dellDestPath = path.join(exportDir, dellDestFileName);
             try {
-                fs.copyFileSync(image, imagePath);
+                fs.copyFileSync(dellSrcPath, dellDestPath);
             } catch (error) {
-                console.error(`Erro ao copiar a imagem: ${image}`, error);
+                console.error(`Erro ao copiar o logo da Dell: ${dellLogoFileName}`, error);
+            }
+        }
+
+        if (fundingLogo) {
+            const fundingLogoFileName = fundingLogo.replace('/logos/', '');
+            const fundingLogoFileExtension = path.extname(fundingLogoFileName);
+            const fundingDestFileName = `funding-logo-f${fundingFrameIndex}${fundingLogoFileExtension}`;
+            const fundingSrcPath = path.join(logosDir, fundingLogoFileName);
+            const fundingDestPath = path.join(exportDir, fundingDestFileName);
+            try {
+                fs.copyFileSync(fundingSrcPath, fundingDestPath);
+            } catch (error) {
+                console.error(`Erro ao copiar o logo de financiamento: ${fundingLogoFileName}`, error);
             }
         }
     });
 
-    res.send('Exportação concluída com sucesso!');
+
+    res.status(200).send('Exportação concluída com sucesso!');
 });
 
 module.exports = router;
